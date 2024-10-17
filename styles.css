@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #4B3D32, #C65D36);
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 18px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgMove 15s infinite alternate;
+}
+
+/* Smooth background animation */
+@keyframes bgMove {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1, h2 {
+    color: #FFCE54;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p, ul {
+    color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 3px solid #FFCE54;
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+.abwaab-logo {
+    width: 80px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.contact-header {
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FF6F20;
+    margin-top: 20px;
+}
+
+a {
+    color: #FFCE54;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* Icons */
+.icon, .whatsapp-icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Translate Button */
+.translate-button {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.translate-button img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+    .profile-img { width: 120px; }
+    body { padding: 10px; }
+}
