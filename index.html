@@ -1,233 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahmoud Mostafa Portfolio</title>
     <link rel="icon" href="M.png">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(to bottom, #4B3D32, #C65D36);
-            color: #ecf0f1;
-            text-align: center;
-            font-size: 18px;
-            overflow: auto;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            font-weight: bold;
-            color: #FFCE54;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        h2 {
-            font-weight: normal;
-            color: #FF6F20;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        p {
-            line-height: 1.6;
-            color: #f9f9f9;
-            animation: fadeIn 1s ease-in-out;
-            margin: 10px 0;
-        }
-
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-            color: #f9f9f9;
-            text-align: left;
-        }
-
-        .contact {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: rgba(44, 62, 80, 0.8);
-            border-radius: 5px;
-        }
-
-        a {
-            color: #FFCE54;
-            text-decoration: none;
-            position: relative;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #FFD700;
-            transition: color 0.3s;
-        }
-
-        img {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            object-fit: cover;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .abwaab-logo {
-            width: 100px;
-            margin: 5px auto;
-            display: block;
-        }
-
-        .icon {
-            width: 20px;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        .whatsapp-icon {
-            width: 24px;
-            vertical-align: middle;
-        }
-
-        .translate-button {
-            position: absolute;
-            top: 20px;
-            left: 40px; /* تغيير القيمة لتحريك الزر لليمين */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .translate-button img {
-            width: 30px; /* حجم الصورة */
-            border-radius: 50%; /* جعل الصورة دائرية */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS -->
 </head>
 <body>
 
+    <!-- Translate Button -->
     <button class="translate-button" onclick="toggleTranslation()">
         <img src="translateicon.png" alt="Translate Icon"> 
     </button>
 
-    <h1 id="name">Mahmoud Mostafa Mahmoud El-Sayed</h1>
-    <img src="profile.jpg.jpg" alt="Profile Picture">
-    <h2 id="job-title">Tele Sales</h2>
-    <p id="description">University student with moderate experience in technology and sales.</p>
+    <!-- Main Content -->
+    <div class="container">
+        <h1 id="name">Mahmoud Mostafa Mahmoud El-Sayed</h1>
+        <img src="profile.jpg.jpg" alt="Profile Picture" class="profile-img">
+        <h2 id="job-title">Tele Sales</h2>
+        <p id="description">University student with moderate experience in technology and sales.</p>
 
-    <h2>Education</h2>
-    <p id="education">Banha University - Specific Education, Technology Department - Graduation Year: 2029</p>
+        <section>
+            <h2>Education</h2>
+            <p id="education">Banha University - Specific Education, Technology Department - Graduation Year: 2029</p>
+        </section>
 
-    <h2>Work Experience</h2>
-    <ul id="work-experience">
-        <li>Abwaab Platform - Tele Sales: 2019 - 2022 <img src="https://st.abwaab.com/public/_nuxt/abwaab_logo.BtjDnhmX.png" alt="Abwaab Logo" class="abwaab-logo"></li>
-        <li>Abwaab Platform - Supervisor: 2022 - 2023</li>
-        <li>Ashtar Platform - Customer Service: Beginning of 2023</li>
-        <li>Azhari Student Guide Platform - Manager: End of 2023</li>
-    </ul>
+        <section>
+            <h2>Work Experience</h2>
+            <ul id="work-experience">
+                <li>Abwaab Platform - Tele Sales: 2019 - 2022 <img src="https://st.abwaab.com/public/_nuxt/abwaab_logo.BtjDnhmX.png" alt="Abwaab Logo" class="abwaab-logo"></li>
+                <li>Abwaab Platform - Supervisor: 2022 - 2023</li>
+                <li>Ashtar Platform - Customer Service: Beginning of 2023</li>
+                <li>Azhari Student Guide Platform - Manager: End of 2023</li>
+            </ul>
+        </section>
 
-    <h2>Skills</h2>
-    <ul id="skills">
-        <li>Computer (Excel, Word)</li>
-        <li>Editing</li>
-        <li>Marketing & Design</li>
-    </ul>
+        <section>
+            <h2>Skills</h2>
+            <ul id="skills">
+                <li>Computer (Excel, Word)</li>
+                <li>Video Editing</li>
+                <li>Marketing & Design</li>
+            </ul>
+        </section>
 
-    <h2 class="contact">Contact Information</h2>
-    <p>
-        Email: 
-        <a href="mailto:mahmoudmostafajo@gmail.com">mahmoudmostafajo@gmail.com</a>
-        <img src="https://img.icons8.com/material-outlined/24/ffffff/email.png" alt="Email" class="icon">
-    </p>
-    <p>
-        Phone: 01028813942 / 01115089627
-        <img src="https://img.icons8.com/material-outlined/24/ffffff/phone.png" alt="Phone" class="icon">
-    </p>
+        <!-- Contact Information -->
+        <h2 class="contact-header">Contact Information</h2>
+        <p>Email: 
+            <a href="mailto:mahmoudmostafajo@gmail.com">mahmoudmostafajo@gmail.com</a>
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/email.png" alt="Email" class="icon">
+        </p>
+        <p>Phone: 01028813942 / 01115089627
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/phone.png" alt="Phone" class="icon">
+        </p>
+        <p>WhatsApp: 
+            <a href="https://wa.me/201028813942">Send to me</a>
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+        </p>
+    </div>
 
-    <p>
-        WhatsApp: 
-        <a href="https://wa.me/201028813942">+201028813942</a>
-        <img src="https://img.icons8.com/material-outlined/24/ffffff/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-    </p>
-
-    <script>
-        const translations = {
-            "en": {
-                "name": "Mahmoud Mostafa Mahmoud El-Sayed",
-                "job-title": "Tele Sales",
-                "description": "University student with moderate experience in technology and sales.",
-                "education": "Banha University - Specific Education, Technology Department - Graduation Year: 2029",
-                "work-experience": [
-                    "Abwaab Platform - Tele Sales: 2019 - 2022",
-                    "Abwaab Platform - Supervisor: 2022 - 2023",
-                    "Ashtar Platform - Customer Service: Beginning of 2023",
-                    "Azhari Student Guide Platform - Manager: End of 2023"
-                ],
-                "skills": [
-                    "Computer (Excel, Word)",
-                    "Editing",
-                    "Marketing & Design"
-                ]
-            },
-            "ar": {
-                "name": "محمود مصطفى محمود السيد",
-                "job-title": "تيلي سيلز",
-                "description": "طالب جامعي ذو خبرة متوسطة في التكنولوجيا والمبيعات.",
-                "education": "جامعة بنها - تربية نوعية، قسم التكنولوجيا - سنة التخرج: 2029",
-                "work-experience": [
-                    "منصة أبواب - تيلي سيلز: 2019 - 2022",
-                    "منصة أبواب - مشرف: 2022 - 2023",
-                    "منصة أشطر - خدمة العملاء: بداية 2023",
-                    "منصة دليل الطلاب الأزهريين - مدير: نهاية 2023"
-                ],
-                "skills": [
-                    "حاسوب (Excel, Word)",
-                    "مونتاج",
-                    "تصميم و تسويق"
-                ]
-            }
-        };
-
-        let currentLanguage = 'en';
-
-        function toggleTranslation() {
-            currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-            updateContent();
-        }
-
-        function updateContent() {
-            document.getElementById("name").innerText = translations[currentLanguage].name;
-            document.getElementById("job-title").innerText = translations[currentLanguage]["job-title"];
-            document.getElementById("description").innerText = translations[currentLanguage].description;
-            document.getElementById("education").innerText = translations[currentLanguage].education;
-
-            const workExperienceList = document.getElementById("work-experience");
-            workExperienceList.innerHTML = "";
-            translations[currentLanguage]["work-experience"].forEach(item => {
-                const li = document.createElement("li");
-                li.innerText = item;
-                workExperienceList.appendChild(li);
-            });
-
-            const skillsList = document.getElementById("skills");
-            skillsList.innerHTML = "";
-            translations[currentLanguage]["skills"].forEach(item => {
-                const li = document.createElement("li");
-                li.innerText = item;
-                skillsList.appendChild(li);
-            });
-
-            document.getElementById("translate-text").innerText = currentLanguage === 'en' ? 'Translate to Arabic' : 'Translate to English';
-        }
-    </script>
-    
+    <!-- JavaScript for Translations -->
+    <script src="scripts.js"></script>
 </body>
 </html>
